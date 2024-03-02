@@ -1,4 +1,3 @@
-/* General Styles */
 body {
   font-family: sans-serif;
   margin: 0;
@@ -47,7 +46,7 @@ ul {
 
 li {
   display: flex;
-  justify-content: space-between; /* Adjust buttons positions */
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
 }
@@ -62,7 +61,6 @@ button {
   cursor: pointer;
 }
 
-/* CSS */
 .updBtn {
   appearance: none;
   background-color: #000000;
@@ -106,36 +104,32 @@ button {
   transform: translateY(0);
 }
 
-/* Edit and Delete Buttons */
 .editBtn,
 .delBtn {
-  background-color: #4caf50; /* Green color */
+  background-color: #4caf50;
   border: none;
   color: white;
   padding: 5px 10px;
   text-align: center;
   text-decoration: none;
-  display: inline-block; /* Change from 'block' for spacing */
+  display: inline-block;
   font-size: 14px;
-  /* Flex properties removed for independent behavior */
   margin: 0 5px;
   cursor: pointer;
   border-radius: 4px;
 }
 
-/* Hover effects for the buttons */
 .editBtn:hover,
 .delBtn:hover {
-  background-color: #3e8e41; /* Darker green */
+  background-color: #3e8e41;
 }
 
-/* Delete button color */
 .delBtn {
-  background-color: #f44336; /* Red color */
+  background-color: #f44336;
 }
 
 .delBtn:hover {
-  background-color: #da1e23; /* Darker red */
+  background-color: #da1e23;
 }
 
 /* Responsiveness */
@@ -145,17 +139,15 @@ button {
   }
 
   li {
-    /* Remove flexbox properties for smaller screens */
     display: block;
     justify-content: initial;
     align-items: initial;
   }
 
-  /* Make edit and delete buttons equal width */
   .editBtn,
   .delBtn {
     display: block;
-    width: 49%; /* Set width to 49% for each button */
-    margin: 18px auto 5px; /* Center buttons and add some margin */
+    width: 49%;
+    margin: 18px auto 5px;
   }
 }
