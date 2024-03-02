@@ -46,10 +46,10 @@ ul {
 }
 
 li {
-  margin-bottom: 10px;
-  display: flex; /* Use flexbox for layout control */
-  justify-content: center; /* Center elements horizontally */
+  display: flex;
+  justify-content: space-between; /* Adjust buttons positions */
   align-items: center;
+  margin-bottom: 10px;
 }
 
 strong {
@@ -57,16 +57,15 @@ strong {
   margin-right: 5px;
 }
 
-/* button {
+button {
   margin-left: 10px;
   cursor: pointer;
-} */
+}
 
 /* CSS */
 .updBtn {
   appearance: none;
   background-color: #000000;
-
   border: 2px solid #1a1a1a;
   border-radius: 15px;
   box-sizing: border-box;
@@ -106,6 +105,7 @@ strong {
   box-shadow: none;
   transform: translateY(0);
 }
+
 /* Edit and Delete Buttons */
 .editBtn,
 .delBtn {
@@ -115,9 +115,9 @@ strong {
   padding: 5px 10px;
   text-align: center;
   text-decoration: none;
-  display: block;
+  display: inline-block; /* Change from 'block' for spacing */
   font-size: 14px;
-  flex: 1;
+  /* Flex properties removed for independent behavior */
   margin: 0 5px;
   cursor: pointer;
   border-radius: 4px;
@@ -138,9 +138,24 @@ strong {
   background-color: #da1e23; /* Darker red */
 }
 
-/* Responsiveness (Optional) */
+/* Responsiveness */
 @media only screen and (max-width: 768px) {
   .App {
     padding: 10px;
+  }
+
+  li {
+    /* Remove flexbox properties for smaller screens */
+    display: block;
+    justify-content: initial;
+    align-items: initial;
+  }
+
+  /* Make edit and delete buttons equal width */
+  .editBtn,
+  .delBtn {
+    display: block;
+    width: 49%; /* Set width to 49% for each button */
+    margin: 18px auto 5px; /* Center buttons and add some margin */
   }
 }
